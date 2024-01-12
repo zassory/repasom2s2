@@ -3,73 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercise</title>
-    <style>
-        h2{
-            text-align: center;
-        }
-        .ordenar{
-            display: flex;
-            flex-direction: column;
-            max-width: 200px;
-            margin: 0 auto;
-            margin-top: 20px;
-        }
-    </style>    
+    <title>Nimrodel</title>
+    <link rel="icon" href="./Assets/img/n.png" type="image/x-icon">
+    <link rel="stylesheet" href="./Assets/css/styles.css">
 </head>
 <body>
-    <form action="redirection.html" method="POST">
-        <h2>FORMULARIO</h2>
-        <div class="ordenar">
-            <label for="nombre">NOMBRE</label>
-            <input type="text" name="nombre" id="nombre">
-        </div>
-        <div class="ordenar">
-            <label for="direccion">DIRECCION</label>
-            <input type="text" name="direccion" id="direccion">
-        </div>
-        <div class="ordenar">
-            <label for="especialidad">ESPECIALIDAD MEDICA</label>
-            <input type="text" name="especialidad" list="especialidades">
-            <datalist id="especialidades">
-                <option>MEDICINA INTERNA</option>
-                <option>MEDICINA GENERAL</option>
-                <option>TRAUMATOLOGIA</option>
-                <option>NUTRICIONISTA</option>
-            </datalist>
-        </div>
-        <div class="ordenar">
-            <label for="hora">HORA</label>
-            <input type="time">
-        </div>
-        <div class="ordenar">
-            <label for="fecha">FECHA</label>
-            <input type="date" id="fecha" name="fecha">
-        </div>
+    <header class="alinear">
+        <img src="./Assets/IMG/logo-pub.jpg" alt="logo pub" width="300px">
+            <ul>
+                <li>Nuestros productos</li>
+                <li>Sobre nosotros</li>
+                <li>Comuniquemonos</li>
+                <li>Reserva</li>
+            </ul>
+    </header>
+    <section class="alinear">
+        <img src="./Assets/img/trago1.jpg" alt="trago 1" width="300px">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo odio</p>
+        <h3>Trago 1</h3>
+    </section>
+    <section class="alinear">
+        <img src="./Assets/img/trago2.jpg" alt="trago 2" width="300px">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo odio</p>
+        <h3>Trago 2</h3>
+    </section>
+    <section class="alinear">
+        <img src="./Assets/img/trago3.jpg" alt="tragto 3" width="300px">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo odio</p>
+        <h3>Trago 3</h3>
+    </section>
+    <section>
+        <form action="comuniquemonos.html" method="post" class="formulario">
+            <h2>Comuniquemonos</h2>
+            <div>
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre">
+            </div>            
+            <div>
+                <label for="correo">Correo</label>
+                <input type="email" name="email" id="email">
+            </div>
+            <div>
+                <label for="telefono">Telefono</label>
+                <input type="tel" name="telefono" id="telefono">
+            </div>            
+            <div>
+                <label for="motivo">Motivo</label>
+                <input type="text" name="motivo" id="motivo">
+            </div>
 
-    </form>
-    <script>                
-        let fecha = document.getElementById("fecha")
-
-        fecha.addEventListener('change', ()=> {
-                        
-            let fechaInput = document.getElementById("fecha").value;            
-
-            //Creamos un objeto fecha
-            let fechaActual = new Date(fechaInput)
-                        
-            //Obtener componentes de la fecha
-            let dia = fechaActual.getDate()
-            let mes = fechaActual.getMonth()
-            let anio = fechaActual.getFullYear()            
-
-            //let fechaFormateada = `${dia}/${mes}/${anio}`
-
-            
-
-            //Mostrar la fecha formateada en un párrafo
-            //document.getElementById('fechaFormateada').innerHTML = `Fecha formateada: ${fechaFormateada}`;
-        })
-    </script>
+            <div>                
+                <textarea name="motivo2" id="motivo2" cols="30" rows="10"></textarea>
+            </div>
+            <div class="boton">
+                <input type="submit" value="Enviar" width="10px">
+            </div>
+        </form>
+        <form action="reserva.html" method="post" class="formulario">
+            <h2>Reserva</h2>
+            <div>
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre">
+            </div>
+            <div>
+                <label for="correo">Correo</label>
+                <input type="email" name="correo" id="correo">
+            </div>
+            <div>
+                <label for="telefono">Telefono</label>
+                <input type="tel" name="telefono" id="telefono">
+            </div>
+            <div>
+                <label for="fecha">Fecha</label>
+                <input type="date" name="fecha" id="fecha">
+            </div>
+            <div>
+                <label for="hora">Hora</label>
+                <input type="time" name="hora" id="hora">
+            </div>
+            <div>
+                <label for="cantidad-asistentes">Cantidad asistentes</label>
+                <input type="number" name="cantidad-asistentes" id="cantidad-asistentes">
+            </div>
+            <div class="boton">
+                <input type="submit" value="Reservar" width="10px">
+            </div>
+        </form>
+    </section>
+    <footer>
+        <p>Todos los derechos reservados &copy;</p>
+        <p>Todos los derechos reservados &reg;</p>
+    </footer>
 </body>
 </html>

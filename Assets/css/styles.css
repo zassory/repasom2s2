@@ -1,0 +1,32 @@
+h1{
+    text-align: center;
+}
+h2{
+    text-transform: uppercase;
+}
+.alinear{
+    display: flex;
+    flex-direction: column;    
+    text-align: center;    
+}
+.alinear ul{
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.alinear img{
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+}
+.formulario div{
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+.boton {
+    max-width: 200px;
+}
