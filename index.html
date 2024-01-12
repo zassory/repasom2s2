@@ -3,9 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Exercise</title>
+    <style>
+        h2{
+            text-align: center;
+        }
+        .ordenar{
+            display: flex;
+            flex-direction: column;
+            max-width: 200px;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+    </style>    
 </head>
 <body>
-    
+    <form action="redirection.html" method="POST">
+        <h2>FORMULARIO</h2>
+        <div class="ordenar">
+            <label for="nombre">NOMBRE</label>
+            <input type="text" name="nombre" id="nombre">
+        </div>
+        <div class="ordenar">
+            <label for="direccion">DIRECCION</label>
+            <input type="text" name="direccion" id="direccion">
+        </div>
+        <div class="ordenar">
+            <label for="especialidad">ESPECIALIDAD MEDICA</label>
+            <input type="text" name="especialidad" list="especialidades">
+            <datalist id="especialidades">
+                <option>MEDICINA INTERNA</option>
+                <option>MEDICINA GENERAL</option>
+                <option>TRAUMATOLOGIA</option>
+                <option>NUTRICIONISTA</option>
+            </datalist>
+        </div>
+        <div class="ordenar">
+            <label for="hora">HORA</label>
+            <input type="time">
+        </div>
+        <div class="ordenar">
+            <label for="fecha">FECHA</label>
+            <input type="date" id="fecha" name="fecha">
+        </div>
+
+    </form>
+    <script>                
+        let fecha = document.getElementById("fecha")
+
+        fecha.addEventListener('change', ()=> {
+                        
+            let fechaInput = document.getElementById("fecha").value;            
+
+            //Creamos un objeto fecha
+            let fechaActual = new Date(fechaInput)
+                        
+            //Obtener componentes de la fecha
+            let dia = fechaActual.getDate()
+            let mes = fechaActual.getMonth()
+            let anio = fechaActual.getFullYear()            
+
+            //let fechaFormateada = `${dia}/${mes}/${anio}`
+
+            
+
+            //Mostrar la fecha formateada en un párrafo
+            //document.getElementById('fechaFormateada').innerHTML = `Fecha formateada: ${fechaFormateada}`;
+        })
+    </script>
 </body>
 </html>
