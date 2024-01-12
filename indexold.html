@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content ="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <form action="redirection.html" method="post">
+        <label for="nombre">NOMBRE</label>
+        <input type="text" name="nombre" id="nombre">
+        <label for="direccion">DIRECCION</label>
+        <input type="text" name="direccion" id="direccion">
+
+        <label for="lista">COLOR FAVORITO</label>
+        <input type="text" name="lista" list="colores">
+        <datalist id="colores">
+            <option value="rojo">Rojo</option>
+            <option value="azul">Azul</option>
+            <option value="amarillo">Amarillo</option>
+        </datalist>
+
+        <label for="animales">ANIMALES FAVORITOS</label>
+        <select name="animales" id="animales">
+            <option value="perro">Perro</option>
+            <option value="gato">Gato</option>
+            <option value="conejo">Conejo</option>
+        </select>
+
+        <button>ENVIAR</button>
+    </form>
+</body>
+</html>
